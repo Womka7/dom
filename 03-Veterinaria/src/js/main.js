@@ -102,11 +102,13 @@ mascotasVeterinario.forEach(mascota => {
 `
 });
 
-
-function clear() {
-    section.addEventListener
+let button = document.querySelector("button");
+function limpiar() {
+    button.addEventListener("click", function () {
+        main.innerHTML = ""
+    })
 }
-
+limpiar();
 
 
 
