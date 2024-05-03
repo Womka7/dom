@@ -6,7 +6,7 @@ let mascotasVeterinario = [
         edadMascota: 9,
         pesoMascota: "2 kilos",
         estadoMascota: "estable",
-        link: 'https://cdn.shopify.com/s/files/1/0740/0383/files/cute-3106473__340_2048x2048.jpg?v=1541113625',
+        link: './public/img/cat1.webp',
         propietarioMascota: {
             nombreDueñoMascota: "karina pineda",
             identificacionDueñoMascota: "1046545548",
@@ -21,7 +21,7 @@ let mascotasVeterinario = [
         edadMascota: 9,
         pesoMascota: "7 kilos",
         estadoMascota: "estable",
-        link: 'https://www.mirringo.com.co/Portals/mirringo/articulos-mirringo-panama/que-significa-los-colores-de-los-gatos/GATO-Blanco-y-negro-min.jpg?ver=2023-02-20-171503-600',
+        link: './public/img/cat2.webp',
         propietarioMascota: {
             nombreDueñoMascota: "karina pineda",
             identificacionDueñoMascota: "1046545548",
@@ -36,7 +36,7 @@ let mascotasVeterinario = [
         edadMascota: 8,
         pesoMascota: "12 kilos",
         estadoMascota: "critico",
-        link: 'https://img.freepik.com/foto-gratis/hermoso-perro-border-collie-divirtiendose-al-aire-libre_23-2149304031.jpg?size=626&ext=jpg&ga=GA1.1.1319243779.1710547200&semt=ais',
+        link: './public/img/dog1.webp',
         propietarioMascota: {
             nombreDueñoMascota: "karina pineda",
             identificacionDueñoMascota: "1046545548",
@@ -51,7 +51,7 @@ let mascotasVeterinario = [
         edadMascota: 4,
         pesoMascota: "14 kilos",
         estadoMascota: "estable",
-        link: 'https://blog.laika.com.co/wp-content/uploads/2022/05/p-pexels-barnabas-davoti-8842163.jpg.jpeg',
+        link: './public/img/dog2.webp',
         propietarioMascota: {
             nombreDueñoMascota: "lucila moreno",
             identificacionDueñoMascota: "15642646",
@@ -66,7 +66,7 @@ let mascotasVeterinario = [
         edadMascota: 4,
         pesoMascota: "8 kilos",
         estadoMascota: "critico",
-        link: 'https://http2.mlstatic.com/D_NQ_NP_859173-MCO52901771689_122022-O.webp',
+        link: './public/img/cat3.webp',
         propietarioMascota: {
             nombreDueñoMascota: "luisa loaiza",
             identificacionDueñoMascota: "1068923324",
@@ -81,7 +81,7 @@ let mascotasVeterinario = [
         edadMascota: 2,
         pesoMascota: "6 kilos",
         estadoMascota: "critico",
-        link: 'https://www.superpet.club/blog/wp-content/uploads/2022/02/french-bulldog-1482630_1920-compressed.webp',
+        link: './public/img/dog3.webp',
         propietarioMascota: {
             nombreDueñoMascota: "marizol rocha",
             identificacionDueñoMascota: "145626448",
@@ -96,7 +96,7 @@ let mascotasVeterinario = [
         edadMascota: 3,
         pesoMascota: "16 kilos",
         estadoMascota: "estable",
-        link: 'https://i1.sndcdn.com/artworks-000627726163-0iqkhe-t500x500.jpg',
+        link: './public/img/dog4.webp',
         propietarioMascota: {
             nombreDueñoMascota: "valentina lopez",
             identificacionDueñoMascota: "123556560",
@@ -111,7 +111,7 @@ let mascotasVeterinario = [
         edadMascota: 13,
         pesoMascota: "11 kilos",
         estadoMascota: "critico",
-        link: 'https://http2.mlstatic.com/D_NQ_NP_667724-MCO75436055929_032024-O.webp',
+        link: './public/img/cat4.webp',
         propietarioMascota: {
             nombreDueñoMascota: "laura osorno",
             identificacionDueñoMascota: "164568754",
@@ -126,7 +126,7 @@ let mascotasVeterinario = [
         edadMascota: 12,
         pesoMascota: "10 kilos",
         estadoMascota: "critico",
-        link: 'https://dogsfinalguide.com/wp-content/uploads/2023/10/steve-smith-KV1pVY72r-A-unsplash.jpg.webp',
+        link: './public/img/dog5.webp',
         propietarioMascota: {
             nombreDueñoMascota: "carolina cardona",
             identificacionDueñoMascota: "165969323",
@@ -141,7 +141,7 @@ let mascotasVeterinario = [
         edadMascota: 3,
         pesoMascota: "2 kilos",
         estadoMascota: "estable",
-        link: 'https://www.paraminipinschers.com/wp-content/uploads/2023/12/mini-pincher.webp?ezimgfmt=rs:380x300/rscb1',
+        link: "./public/img/dog6.webp",
         propietarioMascota: {
             nombreDueñoMascota: "laura osorno",
             identificacionDueñoMascota: "16589506",
