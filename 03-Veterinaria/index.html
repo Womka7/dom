@@ -23,12 +23,33 @@
 
 <body>
     <!-- ps-5 pe-5 -->
-    <header id="header" class="d-flex justify-content-between align-items-center px-5">
-        <h1>veterinaria</h1>
-        <button type="button" class="bg-primary border-0 rounded text-light fs-5 fw-bold py-2 px-3">limpiar</button>
+    <header id="header">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Veterinaria Riwi</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#adopcion">Animales en Adopción</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contacto">Contáctanos</a>
+                    </li>
+                  </ul>
+                  <button onclick="cambiarTema()" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
+                </div>
+              </div>
+        </nav>
     </header>
 
-    <main>
+    <main class="mt-5">
         <section>
         </section>
     </main>
