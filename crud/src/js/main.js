@@ -7,19 +7,19 @@ import '../scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 
 // importo la funcion foreach de operaciones
-import { listarIndex, withForEach } from './operations.js';
+import { create, index} from './operations.js';
 
 
+// importo la base de datos
+import { coders } from '../../public/data/database.js';
 // -----------------------------------------------------
 // *****************************************************
 
 
-//importo sweet alert
-import Swal from 'sweetalert2';
+
 import { Chart } from 'chart.js';
 import * as echarts  from 'echarts';
-import { coders } from '../../public/data/database.js';
-
+import { alertSmallSuccess } from './alert.js';
 // Swal.fire({
 //     title: "Submit your Github username",
 //     input: "text",
@@ -66,4 +66,29 @@ import { coders } from '../../public/data/database.js';
 
 const tbody=document.querySelector("tbody")
 
-listarIndex(coders,tbody)
+
+const name=document.getElementById("name")
+const lastName=document.getElementById("last-name")
+const email=document.getElementById("email")
+const form=document.querySelector("form")
+
+index(coders,tbody)
+
+
+
+
+
+// RECORRE LA funcion crear nuevo coder
+
+form.addEventListener("submit",function (event) {
+    // console.log(name.value, lastName.value,email.value);  
+
+    create(name, lastName,email, coders)
+    // console.log(newCoder);
+    form.reset()
+    alertSmallSuccess("El coder fue guardado exitosamente")
+    index(coders,tbody)
+
+    event.preventDefault()  
+})
+

@@ -2,7 +2,10 @@
 // en el momento unicamnete estoy utilizando forEach y por eso se exporta
 
 
-export function listarIndex(coders,tbody) {
+
+// listar-- en crud se debe llamar index
+export function index(coders,tbody) {
+    tbody.innerHTML=""
     coders.forEach(coder => {
         tbody.innerHTML+=`
         <tr>
@@ -16,6 +19,17 @@ export function listarIndex(coders,tbody) {
 }
 
 
+// función crear nuevo coder
+export function create(name, lastName,email, coders) {
+    const newCoder={
+        id: Date.now(),
+        name: name.value,
+        lastName: lastName.value,
+        email: email.value
+    }
+
+    coders.push(newCoder)
+}
 
 
 
