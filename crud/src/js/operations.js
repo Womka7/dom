@@ -19,7 +19,7 @@ export function index(coders,tbody) {
 }
 
 
-// función crear nuevo coder
+// función crear nuevo coder -Y GUARDARLOS
 export function create(name, lastName,email, coders) {
     const newCoder={
         id: Date.now(),
