@@ -16,7 +16,7 @@ const Toast = Swal.mixin({
   });
   
 
- export function alertSmallSuccess(message) {
+ export function showSmallSuccess(message) {
     Toast.fire({
         icon: "success",
         title: message

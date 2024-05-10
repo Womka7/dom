@@ -13,6 +13,11 @@ export function index(coders,tbody) {
             <td>${coder.name}</td>
             <td>${coder.lastName}</td>
             <td class="text-lowercase">${coder.email}</td>
+            <td>
+                <button type="button" data-id=${coder.id} class="btn btn-primary">details</button>
+                <button type="button" data-id=${coder.id} class="btn btn-warning">edit</button>
+                <button type="button" data-id=${coder.id} class="btn btn-danger">delete</button>
+            </td>
         </tr>
         `
     });

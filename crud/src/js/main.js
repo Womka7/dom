@@ -19,7 +19,7 @@ import { coders } from '../../public/data/database.js';
 
 import { Chart } from 'chart.js';
 import * as echarts  from 'echarts';
-import { alertSmallSuccess } from './alert.js';
+import {showSmallSuccess } from './alert.js';
 // Swal.fire({
 //     title: "Submit your Github username",
 //     input: "text",
@@ -64,13 +64,13 @@ import { alertSmallSuccess } from './alert.js';
 // console.log(coders);
 
 
+const table=document.querySelector("table")
 const tbody=document.querySelector("tbody")
-
-
 const name=document.getElementById("name")
 const lastName=document.getElementById("last-name")
 const email=document.getElementById("email")
 const form=document.querySelector("form")
+
 
 index(coders,tbody)
 
@@ -86,9 +86,35 @@ form.addEventListener("submit",function (event) {
     create(name, lastName,email, coders)
     // console.log(newCoder);
     form.reset()
-    alertSmallSuccess("El coder fue guardado exitosamente")
+    showSmallSuccess("El coder fue guardado exitosamente")
     index(coders,tbody)
 
     event.preventDefault()  
 })
 
+
+table.addEventListener("click", function (event) {
+
+
+    if (event.target.classList.contains("btn-danger")) {
+        const idAEliminar=event.target.getAttribute("data-id")
+        console.log(idAEliminar);
+
+// *******************ALTERNATIVA A ELIMINAR********************
+
+        // const idToDelete=event.target.parentElement.parentElement.firstElementChild.textContent
+        // console.log(idToDelete);
+
+        coders.forEach((coder, index) => {
+            if (coder.id==idAEliminar) {
+                //aqui lo encontró
+                coders.splice(index,1)
+            }
+        });
+        showSmallSuccess("coder deleted")
+        // hace que se refresque de tal manera que cuando elimine me quite el eliminado
+        index(coders,tbody)
+    }else{
+        showSmallSuccess("le diste click a la tabla")
+    }
+})
