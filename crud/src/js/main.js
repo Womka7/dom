@@ -7,7 +7,7 @@ import '../scss/styles.scss'
 import * as bootstrap from 'bootstrap'
 
 // importo la funcion foreach de operaciones
-import { create, index} from './operations.js';
+import { create, deleteItem, index, updateItem} from './operations.js';
 
 
 // importo la base de datos
@@ -70,7 +70,7 @@ const name=document.getElementById("name")
 const lastName=document.getElementById("last-name")
 const email=document.getElementById("email")
 const form=document.querySelector("form")
-
+let idParaActualizar
 
 index(coders,tbody)
 
@@ -82,13 +82,17 @@ index(coders,tbody)
 
 form.addEventListener("submit",function (event) {
     // console.log(name.value, lastName.value,email.value);  
-
-    create(name, lastName,email, coders)
+    if(idParaActualizar===undefined){
+        create(name, lastName,email, coders)
+        showSmallSuccess("saved")
+    }else{
+        updateItem(coders, idParaActualizar,name,lastName, email)
+        showSmallSuccess("update!")
+        idParaActualizar=undefined//se vuelve a vaciar la variable para que quede libre de utilizar
+    }
     // console.log(newCoder);
     form.reset()
-    showSmallSuccess("El coder fue guardado exitosamente")
     index(coders,tbody)
-
     event.preventDefault()  
 })
 
@@ -105,16 +109,22 @@ table.addEventListener("click", function (event) {
         // const idToDelete=event.target.parentElement.parentElement.firstElementChild.textContent
         // console.log(idToDelete);
 
-        coders.forEach((coder, index) => {
-            if (coder.id==idAEliminar) {
-                //aqui lo encontró
-                coders.splice(index,1)
-            }
-        });
+        deleteItem(coders, idAEliminar)
         showSmallSuccess("coder deleted")
         // hace que se refresque de tal manera que cuando elimine me quite el eliminado
         index(coders,tbody)
-    }else{
-        showSmallSuccess("le diste click a la tabla")
     }
+// *******************ALTERNATIVA A ACTUALIZAR********************
+    if (event.target.classList.contains("btn-warning")){
+        idParaActualizar=event.target.getAttribute("data-id")
+
+        const userFound=coders.find(coder => coder.id ==idParaActualizar)
+
+        name.value=userFound.name
+        lastName.value=userFound.lastName
+        email.value=userFound.email                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+    }
+    // else{
+    //     showSmallSuccess("le diste click a la tabla")
+    // }
 })

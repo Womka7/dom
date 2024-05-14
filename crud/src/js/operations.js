@@ -39,9 +39,24 @@ export function create(name, lastName,email, coders) {
 
 
 
+export function deleteItem(coders, idAEliminar){
+    coders.forEach((coder, index) => {
+        if (coder.id==idAEliminar) {
+            //aqui lo encontró
+            coders.splice(index,1)
+        }
+    });
+}
 
-
-
+export function updateItem(coders,idParaActualizar,name,lastName,email){
+    for (const coder of coders) {
+        if (coder.id==idParaActualizar){
+            coder.name=name.value
+            coder.lastName=lastName.value
+            coder.email=email.value
+        }
+    }
+}
 
 
 
